@@ -1,0 +1,7 @@
+/test/mock/*/sam.json
+/test/mock/*/tailwind.config.js
+/test/mock/custom/public/foo/
+/test/mock/custom/src/my-styles.css
+/test/mock/defaults/public/style.css
+/test/mock/defaults/src/styles/
+node_modules/

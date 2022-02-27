@@ -1,0 +1,37 @@
+{
+  "name": "arc-plugin-tailwindcss",
+  "version": "0.1.0",
+  "description": "TailwindCSS workflow integration for Architect",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "test": "npm run lint && npm run test:integration",
+    "test:integration": "cross-env tape 'test/integration/**/*-test.js' | tap-spec"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andybee/arc-plugin-tailwindcss.git"
+  },
+  "author": "Andy Buckingham <andy@andybee.com>",
+  "license": "Apache-2.0",
+  "files": [
+    "src/*"
+  ],
+  "dependencies": {
+    "tailwindcss": "^3.0.23"
+  },
+  "devDependencies": {
+    "@architect/architect": "^10.0.2",
+    "@architect/eslint-config": "^2.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.10.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.5.2"
+  },
+  "eslintConfig": {
+    "extends": "@architect/eslint-config"
+  }
+}
