@@ -16,7 +16,8 @@ exports.startWatcher = function startTailwindCSSWatcher (inputPath, outputPath, 
       '-o',
       outputPath,
       '-w'
-    ]
+    ],
+    { shell: true } // fixes issue with Windows
   )
   watcherProcess.stdout.on('data', (data) => { update?.status(String(data).trim()) })
   watcherProcess.on('exit', (code) => {
