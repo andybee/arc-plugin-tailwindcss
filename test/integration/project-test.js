@@ -8,7 +8,6 @@ const port = 6666
 const mock = join(process.cwd(), 'test', 'mock')
 let cwd
 let artefacts
-// const url = path => `http://localhost:${port}/${path}`
 
 const reset = () => artefacts.map(path => rmSync(path, { recursive: true, force: true }))
 
