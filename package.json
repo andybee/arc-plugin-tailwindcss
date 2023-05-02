@@ -1,6 +1,6 @@
 {
   "name": "arc-plugin-tailwindcss",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "TailwindCSS workflow integration for Architect",
   "main": "src/index.js",
   "scripts": {
