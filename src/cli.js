@@ -10,11 +10,11 @@ exports.startWatcher = function startTailwindCSSWatcher (inputPath, outputPath, 
     'npx',
     [
       'tailwindcss',
-      ...configPath !== undefined ? [ '-c', configPath ] : [],
+      ...configPath !== undefined ? [ '-c', `"${configPath}"` ] : [],
       '-i',
-      inputPath,
+      `"${inputPath}"`,
       '-o',
-      outputPath,
+      `"${outputPath}"`,
       '-w'
     ],
     { shell: true } // fixes issue with Windows
@@ -59,11 +59,11 @@ exports.buildStyleSheet = (inputPath, outputPath, options = {}) => new Promise((
     [
       'npx',
       'tailwindcss',
-      ...configPath ? [ '-c', configPath ] : [],
+      ...configPath ? [ '-c', `"${configPath}"` ] : [],
       '-i',
-      inputPath,
+      `"${inputPath}"`,
       '-o',
-      outputPath,
+      `"${outputPath}"`,
       ...minify ? [ '-m' ] : [],
     ].join(' '),
     (error, stdout, stderr) => {
